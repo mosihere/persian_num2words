@@ -1,4 +1,4 @@
-import src.package.small_function
+import small_module.small_function
 
 
 ones = {
@@ -200,7 +200,7 @@ def num_to_word(number: int) -> str:
     elif number > 999 and number <= 9999:
 
         last_two_digits = int(str_number[2:])
-        if src.package.small_function.is_less_than_twenty(last_two_digits):
+        if small_module.small_function.is_less_than_twenty(last_two_digits):
             tens_word = ten_to_nineteen[last_two_digits]
 
             find_thousands = int(str_number[0])
@@ -231,7 +231,7 @@ def num_to_word(number: int) -> str:
         last_two_digits = int(str_number[3:])
 
 
-        if src.package.small_function.is_less_than_twenty(first_two_digits) and src.package.small_function.is_less_than_twenty(last_two_digits):
+        if small_module.package.small_function.is_less_than_twenty(first_two_digits) and small_module.package.small_function.is_less_than_twenty(last_two_digits):
             thousands_word = ten_to_nineteen[first_two_digits]
 
             find_hundreds = int(str_number[2])
@@ -242,7 +242,7 @@ def num_to_word(number: int) -> str:
             return f'{thousands_word} هزار {hundreds_word} و {tens_word}'
     
 
-        elif src.package.small_function.is_less_than_twenty(first_two_digits) and not src.package.small_function.is_less_than_twenty(last_two_digits):
+        elif small_module.package.small_function.is_less_than_twenty(first_two_digits) and not small_module.package.small_function.is_less_than_twenty(last_two_digits):
 
             thousands_word = ten_to_nineteen[first_two_digits]
 
@@ -258,7 +258,7 @@ def num_to_word(number: int) -> str:
             return f'{thousands_word} هزار {hundreds_word} {tens_word} {ones_word}' 
 
 
-        elif not src.package.small_function.is_less_than_twenty(first_two_digits) and src.package.small_function.is_less_than_twenty(last_two_digits):
+        elif not small_module.package.small_function.is_less_than_twenty(first_two_digits) and small_module.package.small_function.is_less_than_twenty(last_two_digits):
 
             find_ten_thousands = int(str_number[0])
             ten_thousands_word = twenties_and_others[find_ten_thousands]
@@ -300,7 +300,7 @@ def num_to_word(number: int) -> str:
         last_two_digits = int(str_number[4:])
 
 
-        if src.package.small_function.is_less_than_twenty(first_two_digits) and src.package.small_function.s_less_than_twenty(last_two_digits):
+        if small_module.package.small_function.is_less_than_twenty(first_two_digits) and small_module.package.small_function.s_less_than_twenty(last_two_digits):
             find_hundred_thousands = int(str_number[0])
             hundred_thousands_word = hundreds[find_hundred_thousands]
             thousands_word = ten_to_nineteen[first_two_digits]
@@ -313,7 +313,7 @@ def num_to_word(number: int) -> str:
             return f'{hundred_thousands_word} و {thousands_word} هزار {hundreds_word} و {tens_word}'
     
 
-        elif src.package.small_function.is_less_than_twenty(first_two_digits) and not src.package.small_function.is_less_than_twenty(last_two_digits):
+        elif small_module.package.small_function.is_less_than_twenty(first_two_digits) and not small_module.package.small_function.is_less_than_twenty(last_two_digits):
 
             find_hundred_thousands = int(str_number[0])
             hundred_thousands_word = hundreds[find_hundred_thousands]
@@ -333,7 +333,7 @@ def num_to_word(number: int) -> str:
             return f' {hundred_thousands_word} {thousands_word} هزار {hundreds_word} {tens_word} {ones_word}' 
 
 
-        elif not src.package.small_function.is_less_than_twenty(first_two_digits) and src.package.small_function.is_less_than_twenty(last_two_digits):
+        elif not small_module.package.small_function.is_less_than_twenty(first_two_digits) and small_module.package.small_function.is_less_than_twenty(last_two_digits):
 
             find_hundred_thousands = int(str_number[0])
             hundred_thousands_word = hundreds[find_hundred_thousands]

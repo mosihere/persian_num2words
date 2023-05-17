@@ -300,7 +300,7 @@ def num_to_word(number: int) -> str:
         last_two_digits = int(str_number[4:])
 
 
-        if utils.small_function.is_less_than_twenty(first_two_digits) and utils.small_function.s_less_than_twenty(last_two_digits):
+        if utils.small_function.is_less_than_twenty(first_two_digits) and utils.small_function.is_less_than_twenty(last_two_digits):
             find_hundred_thousands = int(str_number[0])
             hundred_thousands_word = hundreds[find_hundred_thousands]
             thousands_word = ten_to_nineteen[first_two_digits]

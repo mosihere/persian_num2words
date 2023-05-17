@@ -2,6 +2,7 @@
 build
 dist
 .idea/
+.DS_Store
 *.egg-info
 /.tox
 .eggs/

@@ -1,6 +1,7 @@
 import utils.small_function
 
 
+
 ones = {
     0: '',
     1: 'یک',
@@ -294,7 +295,7 @@ def num_to_word(number: int) -> str:
             return f'{ten_thousands_word} {thousands_word} هزار و {hundreds_word} {tens_word} {ones_word}'
         
 
-    elif number > 99999 and number <= 9999999:
+    elif number > 99999 and number <= 999999:
 
         first_two_digits = int(str_number[1:3])
         last_two_digits = int(str_number[4:])
@@ -438,3 +439,6 @@ if __name__ == "__main__":
     print(num_to_word(191200))
     print(num_to_word(291299))
     print(num_to_word(191299))
+    print(num_to_word(909123))
+    print(num_to_word(921021))
+    print(num_to_word(102921))
